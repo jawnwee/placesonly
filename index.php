@@ -14,23 +14,12 @@
 		<div class="grid">
 			<header>
 			    Header
-			  </header>
-
-			  <aside class="sidebar-left">
-			    Left Sidebar
-			  </aside>
-
-			  <article>
-			    Article
-			  </article>
-
-			  <aside class="sidebar-right">
-			    Right Sidebar
-			  </aside>
-			  
-			  <footer>
-			    Footer
-			  </footer>
+			</header>
+			<div class="container">
+			</div> 
+			<footer>
+				Footer
+			</footer>
 		</div>
 	</body>
 </html>
