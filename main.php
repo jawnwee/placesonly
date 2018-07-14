@@ -3,9 +3,11 @@
 	include 'taconnect.php';
 
 	function getAccounts() {
+		global $conn;
+		global $testvar;
 		$sql = "SELECT username, about, url FROM accounts";
-		echo global $conn;
-		echo global $testvar;
+		echo $conn;
+		echo $testvar;
 		$result = mysqli_query($conn, $sql);
 		echo $result;
 		if (mysqli_num_rows($result) > 0) {
