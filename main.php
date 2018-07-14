@@ -6,6 +6,7 @@
 		$sql = "SELECT username, about, url FROM accounts";
 		echo "test";
 		echo $conn;
+		echo $testvar;
 		$result = mysqli_query($conn, $sql);
 		echo "test";
 		if (mysqli_num_rows($result) > 0) {
