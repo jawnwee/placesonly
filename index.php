@@ -1,3 +1,6 @@
+<?php
+	include 'taconnect.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -16,6 +19,7 @@
 			    Header
 			</header>
 			<div class="container">
+				
 			</div> 
 			<footer>
 				Footer
