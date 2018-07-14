@@ -1,14 +1,14 @@
 <?php
-	// class Account {
-	// 	var $username
-	// 	var $about
+	class Account {
+		var $username;
+		var $about;
 
-	// 	function setUsername($username) {
-	// 		$this->username = $username;
-	// 	}
+		function setUsername($username) {
+			$this->username = $username;
+		}
 
-	// 	function setAbout($about) {
-	// 		$this->about = $about;
-	// 	}
-	// }
+		function setAbout($about) {
+			$this->about = $about;
+		}
+	}
 ?>

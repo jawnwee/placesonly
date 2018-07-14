@@ -5,7 +5,7 @@
 	function getAccounts() {
 		$sql = "SELECT username, about, url FROM accounts";
 		$result = $conn->query($sql);
-
+		echo "test";
 		if ($result->num_rows > 0) {
 		    echo "<table><tr><th>ID</th><th>Name</th></tr>";
 		    // output data of each row
