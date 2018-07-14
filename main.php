@@ -3,7 +3,7 @@
 	require_once('taconnect.php');
 
 	function getAccounts() {
-		$sql = "SELECT username, about, url FROM Accounts";
+		$sql = "SELECT username, about, url FROM accounts";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
