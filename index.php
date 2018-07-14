@@ -21,6 +21,7 @@
 			<div class="container">
 				<?php
 					getAccounts();
+					getAccounts2();
 				?>
 			</div> 
 			<footer>
