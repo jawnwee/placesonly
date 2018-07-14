@@ -20,7 +20,6 @@
 			</header>
 			<div class="container">
 				<?php
-					include 'main.php';
 					getAccounts();
 				?>
 			</div> 
