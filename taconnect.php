@@ -7,11 +7,11 @@
 	if ($conn->connect_error) {
     	die("Connection failed: " . $conn->connect_error);
 	}
-	echo $conn;
+	// echo $conn;
 
 	$sql = "SELECT username, about, url FROM accounts";
 	echo $testvar;
-	echo $conn;
+	// echo $conn;
 	$result = mysqli_query($conn, $sql);
 	echo $result;
 	if (mysqli_num_rows($result) > 0) {
