@@ -1,6 +1,6 @@
 <?php
 	include './models.php';
-	include 'taconnect.php';
+	include '.taconnect.php';
 
 	function getAccounts() {
 		$sql = "SELECT username, about, url FROM accounts";
