@@ -18,6 +18,7 @@
 	    while($row = mysqli_fetch_array($result)) {
 	        echo $row;
 	    }
+	    echo "success";
 	} else {
 	    echo "0 results";
 	}
