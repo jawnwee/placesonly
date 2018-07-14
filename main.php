@@ -1,12 +1,12 @@
 <?php
 	include './models.php';
-	include 'taconnect.php';
+	include './taconnect.php';
 
 	function getAccounts() {
 		$sql = "SELECT username, about, url FROM accounts";
 		echo "test";
 		echo $conn;
-		echo $testvar;
+		echo .$testvar;
 		$result = mysqli_query($conn, $sql);
 		echo "test";
 		if (mysqli_num_rows($result) > 0) {
