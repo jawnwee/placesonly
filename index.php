@@ -1,5 +1,5 @@
 <?php
-	include 'taconnect.php';
+	include 'main.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -19,7 +19,9 @@
 			    Header
 			</header>
 			<div class="container">
-				
+				<?php
+					getAccounts();
+				?>
 			</div> 
 			<footer>
 				Footer
