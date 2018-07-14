@@ -8,4 +8,5 @@
     	die("Connection failed: " . $conn->connect_error);
 	}
 	echo "testing sigh";
+	echo $testvar;
 ?>

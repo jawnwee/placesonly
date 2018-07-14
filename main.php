@@ -4,8 +4,8 @@
 
 	function getAccounts() {
 		$sql = "SELECT username, about, url FROM accounts";
-		echo $conn;
 		echo $testvar;
+		echo $conn;
 		$result = mysqli_query($conn, $sql);
 		echo $result;
 		if (mysqli_num_rows($result) > 0) {
