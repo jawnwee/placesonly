@@ -3,8 +3,6 @@
 	include 'taconnect.php';
 
 	function getAccounts() {
-		global $conn;
-		global $testvar;
 		$sql = "SELECT username, about, url FROM accounts";
 		echo $conn;
 		echo $testvar;
