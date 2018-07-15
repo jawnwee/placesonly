@@ -13,6 +13,7 @@
 	// }
 
 	function getAccounts() {
+		global $conn;
 		$sql = "SELECT username, about, url FROM accounts";
 		$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) > 0) {
