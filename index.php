@@ -14,14 +14,10 @@
 	 <link rel="stylesheet" href="assets/the-accounts.css">
 	</head>
 	<body>
-		<header>
-		    Header
-		</header>
+		<?php require_once 'header.php'; ?>
 		<div class="grid">
 			<div class="container">
-				<?php
-					require_once 'content.php';
-				?>
+				<?php require_once 'content.php'; ?>
 			</div>
 		</div>
 		<footer>
