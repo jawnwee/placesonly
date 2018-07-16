@@ -14,18 +14,18 @@
 	 <link rel="stylesheet" href="assets/the-accounts.css">
 	</head>
 	<body>
+		<header>
+		    Header
+		</header>
 		<div class="grid">
-			<header>
-			    Header
-			</header>
 			<div class="container">
 				<?php
-					getAccounts();
+					include 'content.php';
 				?>
-			</div> 
-			<footer>
-				Footer
-			</footer>
+			</div>
 		</div>
+		<footer>
+			Footer
+		</footer>
 	</body>
 </html>
