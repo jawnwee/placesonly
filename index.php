@@ -20,7 +20,7 @@
 		<div class="grid">
 			<div class="container">
 				<?php
-					include 'content.php';
+					require_once 'content.php';
 				?>
 			</div>
 		</div>
