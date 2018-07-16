@@ -20,7 +20,7 @@
 <div>
 	<?php foreach(getAccounts() as $acc) : ?>
 		<div>
-			<?php $acc->username; ?>
+			<?php $acc->getUsername(); ?>
 		</div>
 	<?php endforeach; ?>
 </div>

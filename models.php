@@ -10,5 +10,13 @@
 		function setAbout($about) {
 			$this->about = $about;
 		}
+
+		function getUsername() {
+			echo $this->username;
+		}
+
+		function getAbout() {
+			echo $this->about;
+		}
 	}
 ?>
