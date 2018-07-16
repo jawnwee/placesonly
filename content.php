@@ -18,9 +18,9 @@
 	}
 ?>
 <div>
-	<?php
-		foreach(getAccounts() as $acc) {
-			echo "<div>".$acc->username."</div>";
-		}
-	?>
+	<?php foreach(getAccounts() as $acc) : ?>
+		<div>
+			<?php $acc->username; ?>
+		</div>
+	<?php endforeach; ?>
 </div>
