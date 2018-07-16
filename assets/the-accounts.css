@@ -62,10 +62,9 @@ body {
 /* Nav bar */
 .navbar {
 	width: 100%;
+	text-align: center;
 }
 
 .logo {
-	max-height: 120px;
-	margin-left: auto;
-	margin-right: auto;
+	max-height: 85px;
 }
