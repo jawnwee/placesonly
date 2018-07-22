@@ -1,27 +1,20 @@
 <?php
-	include 'main.php';
+	// Grabs the URI and breaks it apart in case we have querystring stuff
+	$request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
+	// Route it up!
+	switch ($request_uri[0]) {
+	    // Home page
+	    case '/':
+	        require 'main.php';
+	        break;
+	    // add
+	    case '/add':
+	        require 'add.php';
+	        break;
+	    // Everything else
+	    default:
+	        eader('HTTP/1.0 404 Not Found');
+	        require 'add.php';
+	        break;
+	}
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>The Accounts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	 <link rel="stylesheet" href="assets/the-accounts.css">
-	</head>
-	<body>
-		<?php require_once 'header.php'; ?>
-		<div class="grid">
-			<div class="container">
-				<?php require_once 'content.php'; ?>
-			</div>
-		</div>
-		<footer>
-			Footer
-		</footer>
-	</body>
-</html>

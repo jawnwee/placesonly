@@ -1,7 +1,7 @@
 <header>
 	<nav class="navbar">
 		<a href="https://www.the-accounts.com">
-			<img class="logo" src="assets/theaccounts.png">
+			<img class="navlogo" src="assets/theaccounts.png">
 		</a>
 	</nav>
 </header>
