@@ -11,6 +11,9 @@
 	    case '/add':
 	        require 'add.php';
 	        break;
+	    case '/addaccount':
+	    	require 'addaccount.php';
+	    	break;
 	    // Everything else
 	    default:
 	        eader('HTTP/1.0 404 Not Found');
