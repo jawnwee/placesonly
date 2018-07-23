@@ -11,7 +11,7 @@
 	if(!$result = $conn->query($addsqlquery)){
 		die('There was an error running the query [' . $conn->error . ']');
 	} else {
-		
+
 	}
 
 	function gen_platform($url)  {
@@ -67,3 +67,4 @@
 		return null;
 	}
 ?>
+test

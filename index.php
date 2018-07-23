@@ -16,7 +16,7 @@
 	    	break;
 	    // Everything else
 	    default:
-	        eader('HTTP/1.0 404 Not Found');
+	        header('HTTP/1.0 404 Not Found');
 	        require 'add.php';
 	        break;
 	}

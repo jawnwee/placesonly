@@ -1,4 +1,4 @@
-<form action="addaccount" method="post">
+<form action="addaccount.php" method="post">
     <p>
         <label for="username">username:</label>
         <input type="text" name="username" id="username">
