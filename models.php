@@ -4,6 +4,8 @@
 		var $accountURL;
 		var $profileImageURL;
 		var $about;
+		var $platformImageURL;
+		var $regDate;
 
 		function setUsername($username) {
 			$this->username = $username;
@@ -21,6 +23,14 @@
 			$this->about = $about;
 		}
 
+		function setPlatformImageURL($url) {
+			$this->platformImageURL = $url;
+		}
+
+		function setRegDate($date) {
+			$this->regDate = date("Y-m-d", strtotime($date));
+		}
+
 		function getUsername() {
 			echo $this->username;
 		}
@@ -35,6 +45,14 @@
 
 		function getAbout() {
 			echo $this->about;
+		}
+
+		function getPlatformImageURL() {
+			echo $this->platformImageURL;
+		}
+
+		function getRegDate() {
+			return $this->regDate;
 		}
 	}
 ?>
