@@ -1,11 +1,12 @@
 <?php
 	global $conn;
-	$accountsSql = "SELECT username, about, account_url, profile_image_url, platform, reg_date FROM accounts";
+	$accountsSql = "SELECT display_name, username, about, account_url, profile_image_url, platform, reg_date FROM accounts";
 	$result = mysqli_query($conn, $accountsSql);
 	$accounts = array();
 	if ($result && mysqli_num_rows($result) > 0) {
 	    while($row = mysqli_fetch_array($result)) {
         	$acc = new Account();
+        	$acc->setDisplayName($row["display_name"]);
         	$acc->setUsername($row["username"]);
         	$acc->setAccountURL($row["account_url"]);
         	$acc->setProfileImageURL($row["profile_image_url"]);
@@ -13,6 +14,10 @@
         	$acc->setRegDate($row["reg_date"]);
         	if ($row["platform"] == "instagram") {
         		$acc->setPlatformImageURL("https://lh3.googleusercontent.com/EaHr0wIbTsvnUVAmIPKEVGhd4CMcI2lo9IXZa3u_uTepzsDeWyb5NyNcgpgz-vFfl5eqn3-wnv3xzRiCf9jyfk0_oBAnVdxhQ7mhaEtDSjAlLaUfyYcMpvegHvnbw1PGmyzafFoQ2Q=w2400");
+        	} else if ($row["platform"] == "twitter") {
+        		$acc->setPlatformImageURL("https://lh3.googleusercontent.com/TmYTHBWCK5ZdG_4SUC-Vu-g4YaFbDCN3Uv9CAfdu03PvWHO33svqpOliBNtb2-I_dTNQXwCGpQuUV7H9JDuk=w1920-h2162");
+        	} else if ($row["platform"] == "youtube") {
+        		$acc->setPlatformImageURL("https://s3-us-west-1.amazonaws.com/the-accounts/youtube.png");
         	}
         	array_push($accounts, $acc);
 	    }
@@ -78,10 +83,12 @@
 					<div class="card">
 						<a href="<?php $acc->getAccountURL(); ?>">
 							<div class="card-container">
-								<img class="profile-image" src="<?php $acc->getProfileImageURL(); ?>"/>
+								<div class="image-container">
+									<img class="profile-image" src="<?php $acc->getProfileImageURL(); ?>"/>
+								</div>
 								<div class="profile-details">
 									<div class="profile-user-container">
-										<h2 class="profile-username"><?php $acc->getUsername(); ?></h2>
+										<h3 class="profile-username"><?php $acc->getDisplayName(); ?></h3>
 										<img class="platform-image" src="<?php $acc->getPlatformImageURL(); ?>"/>
 									</div>
 									<p class="about"><?php $acc->getAbout(); ?></p>

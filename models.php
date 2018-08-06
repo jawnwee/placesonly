@@ -1,11 +1,16 @@
 <?php
 	class Account {
+		var $displayName;
 		var $username;
 		var $accountURL;
 		var $profileImageURL;
 		var $about;
 		var $platformImageURL;
 		var $regDate;
+
+		function setDisplayName($displayName) {
+			$this->displayName = $displayName;
+		}
 
 		function setUsername($username) {
 			$this->username = $username;
@@ -29,6 +34,10 @@
 
 		function setRegDate($date) {
 			$this->regDate = date("Y-m-d", strtotime($date));
+		}
+
+		function getDisplayName() {
+			echo $this->displayName;
 		}
 
 		function getUsername() {

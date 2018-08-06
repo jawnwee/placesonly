@@ -27,7 +27,13 @@ h1 {
 h2 {
 	color: #29292c;
     font-family: "Calibre", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
+}
+
+h3 {
+	color: #29292c;
+    font-family: "Calibre", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    font-weight: 500;
 }
 
 p {
@@ -143,14 +149,18 @@ a:active {
 	display: flex;
 	align-items: center;
 	width: 850px;
-	max-height: 95px;
+	max-height: 96px;
+}
+
+.image-container {
+	height: 96px;
+	width: 96px;
 }
 
 .profile-image {
 	display: block;
 	border-radius: 50%;
-	width: 96px;
-    height: 96px;
+    max-height: 100%;
     border: 1px solid rgba(0,0,0,.0975);
     float: left;
 }
