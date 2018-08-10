@@ -15,7 +15,7 @@
         	if ($row["platform"] == "instagram") {
         		$acc->setPlatformImageURL("https://lh3.googleusercontent.com/EaHr0wIbTsvnUVAmIPKEVGhd4CMcI2lo9IXZa3u_uTepzsDeWyb5NyNcgpgz-vFfl5eqn3-wnv3xzRiCf9jyfk0_oBAnVdxhQ7mhaEtDSjAlLaUfyYcMpvegHvnbw1PGmyzafFoQ2Q=w2400");
         	} else if ($row["platform"] == "twitter") {
-        		$acc->setPlatformImageURL("https://lh3.googleusercontent.com/TmYTHBWCK5ZdG_4SUC-Vu-g4YaFbDCN3Uv9CAfdu03PvWHO33svqpOliBNtb2-I_dTNQXwCGpQuUV7H9JDuk=w1920-h2162");
+        		$acc->setPlatformImageURL("https://s3-us-west-1.amazonaws.com/the-accounts/twitter.png");
         	} else if ($row["platform"] == "youtube") {
         		$acc->setPlatformImageURL("https://s3-us-west-1.amazonaws.com/the-accounts/youtube.png");
         	}
