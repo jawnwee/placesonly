@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "poi.5006166",
+      "type": "Feature",
+      "place_type": [
+        "poi"
+      ],
+      "relevance": 1,
+      "properties": {
+        "tel": "(808) 224-6626",
+        "address": "3566 20th St",
+        "category": "ice cream parlor, ice cream",
+        "landmark": true,
+        "maki": "ice-cream"
+      },
+      "text": "Garden Creamery",
+      "place_name": "Garden Creamery, 3566 20th St, San Francisco, California 94110, United States",
+      "center": [
+        -122.420586,
+        37.758606
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420586,
+          37.758606
+        ]
+      },
+      "context": [
+        {
+          "id": "neighborhood.293934",
+          "text": "Mission"
+        },
+        {
+          "id": "postcode.10054918016049860",
+          "text": "94110"
+        },
+        {
+          "id": "place.15734669613361910",
+          "wikidata": "Q62",
+          "text": "San Francisco"
+        },
+        {
+          "id": "region.3591",
+          "short_code": "US-CA",
+          "wikidata": "Q99",
+          "text": "California"
+        },
+        {
+          "id": "country.3145",
+          "short_code": "us",
+          "wikidata": "Q30",
+          "text": "United States"
+        }
+      ]
+    }
+  ]
+}
