@@ -1,6 +1,6 @@
 <?php
 	global $conn;
-	$poisSql = "SELECT loc_name, address, city, state, country, lat, lng, image_url, account_url, about, type, reg_date FROM pois ORDER BY NEWID()";
+	$poisSql = "SELECT loc_name, address, city, state, country, lat, lng, image_url, account_url, about, type, reg_date FROM pois";
 	$result = mysqli_query($conn, $poisSql);
 	$pois = array();
 	if ($result && mysqli_num_rows($result) > 0) {
