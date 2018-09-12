@@ -14,31 +14,55 @@
 	<meta name="author" content="" />
 	 <link rel="stylesheet" href="assets/the-accounts.css">
 	</head>
-	<script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<body>
-		<?php require_once 'header.php'; ?>
-		<div class="grid">
-			<div class="container">
-				<?php require_once 'content.php'; ?>
-			</div>
-			<div id='map' style='width: 400px; height: 300px;'></div>
-				<script>
-				mapboxgl.accessToken = 'pk.eyJ1IjoiamF3bndlZSIsImEiOiJjamwwMTgwYmwxMDV1M3FwNDAweWs3cGV6In0.39iMWxPjecfKgJZIW4zz9g';
-				var map = new mapboxgl.Map({
-					container: 'map',
-				  	// style URL
-					style: 'mapbox://styles/jawnwee/cjl0422b96lls2rparbxgyaqp',
-				  	// initial position in [lon, lat] format
-					center: [ -122.420586,
-        					37.758606],
-				  	// initial zoom
-				 	zoom: 14
-				});
-				</script>
-			</div>
+		<header>
+			<nav class="navbar">
+				<a href="/">
+					<img class="navlogo" src="assets/theaccounts.png">
+				</a>
+			</nav>
+		</header>
+		<div class="introduction">
+			<h1 class="frontpage-header">
+				Some caption here...
+			</h1>
+		</div>
+		<div class="frontpage-container">
+			<div id='frontpage-listings' class='frontpage-listings'></div>
+		</div>
 		<footer>
 			<!-- Footer -->
 		</footer>
+		<script>
+			var frontpageLocations = [
+			{
+				name: 'San Francisco',
+				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
+				destination: 'bay-area'
+			}];
+			function buildFrontPage(data) {
+				data.forEach(function(location) {
+    				var listings = document.getElementById('frontpage-listings');
+    				var anchor = listings.appendChild(document.createElement('a'));
+				    anchor.href = '/explore?destination=' + location.destination;
+    				var listing = anchor.appendChild(document.createElement('div'));
+				    listing.className = 'frontpage-item';
+				    listing.style.backgroundImage = "url('" + location.image + "')";
+
+				    var detail = listing.appendChild(document.createElement('div'));
+				    detail.className = 'frontpage-item-detail-container';
+
+				    // Create a new link with the class 'title' for each store
+				    // and fill it with the store address
+				    var name = detail.appendChild(document.createElement('h2'));
+				    name.className = 'frontpage-item-detail-name';
+				    name.innerHTML = location.name;
+				});
+			}
+			buildFrontPage(frontpageLocations);
+		</script>
 	</body>
 </html>

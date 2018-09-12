@@ -12,22 +12,14 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
+	 <link rel="stylesheet" href="assets/the-accounts.css">
 	</head>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
-	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-	<link rel="stylesheet" href="assets/contactform.css" type='text/css' />
-	<link rel="stylesheet" href="assets/the-accounts.css" type='text/css' />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<body>
-		<header>
-			<nav class="navbar">
-				<a href="/">
-					<img class="navlogo" src="assets/theaccounts.png">
-				</a>
-			</nav>
-		</header>
-		<?php require_once 'addmapcontent.php'; ?>
+		<?php require_once 'header.php'; ?>
+		<?php require_once 'mapcontent.php'; ?>
 		<footer>
 			<!-- Footer -->
 		</footer>

@@ -1,6 +1,22 @@
 <?php
-	include 'models.php';
-	include 'taconnect.php';
+	require_once('../config.php');
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, "theaccounts");
+	// Check connection
+	if ($conn->connect_error) {
+    	die("Connection failed: " . $conn->connect_error);
+	}
+	$locName = $_POST['locname'];
+	$lat = $_POST['lat'];
+	$lng =  $_POST['lng'];
+	$email =  $_POST['email'];
+	$message =  $_POST['message'];
+	$addsqlquery = '';
+	if ($message != "") {
+		$addsqlquery = "INSERT INTO suggestions (loc_name, lat, lng, emai, message) VALUES ('".$locName."', '".$lat."','".$lng."', '".$email."', '".$message."')";
+	} else if ($locName != "" && $lat != "" && $lng != "" && $email != "") {
+		$addsqlquery = "INSERT INTO suggestions (loc_name, lat, lng, email) VALUES ('".$locName."', '".$lat."','".$lng."', '".$email."')";
+	}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -26,8 +42,19 @@
 					<img class="navlogo" src="assets/theaccounts.png">
 				</a>
 			</nav>
+			<?php if(!$result = $conn->query($addsqlquery)): ?>
+				failed!
+			<?php else: ?>
+				<div class="form-submit-thanks">
+					<h1>
+						Thank You!
+					</h1>
+					<h3>
+						Your submission will be reviewed soon!
+					</h3>
+				</div>
+			<?php endif; ?>
 		</header>
-		<?php require_once 'addmapcontent.php'; ?>
 		<footer>
 			<!-- Footer -->
 		</footer>

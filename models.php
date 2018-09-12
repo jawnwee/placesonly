@@ -64,4 +64,111 @@
 			return $this->regDate;
 		}
 	}
+
+	class PointOfInterest {
+		var $locName;
+		var $address;
+		var $city;
+		var $state;
+		var $country;
+		var $lat;
+		var $lng;
+		var $imageURL;
+		var $accountName;
+		var $accountURL;
+		var $about;
+		var $type;
+
+		function setLocationName($locName) {
+			$this->locName = $locName;
+		}
+
+		function setAddress($address) {
+			$this->address = $address;
+		}
+
+		function setAccountName($name) {
+			$this->accountName = $name;
+		}
+
+		function setAccountURL($url) {
+			$this->accountURL = $url;
+		}
+
+		function setImageURL($url) {
+			$this->imageURL = $url;
+		}
+
+		function setAbout($about) {
+			$this->about = $about;
+		}
+
+		function setCity($city) {
+			$this->city = $city;
+		}
+
+		function setState($state) {
+			$this->state = $state;
+		}
+
+		function setCountry($country) {
+			$this->country = $country;
+		}
+
+		function setLat($lat) {
+			$this->lat = $lat;
+		}
+
+		function setLng($lng) {
+			$this->lng = $lng;
+		}
+
+		function setType($type) {
+			$this->type = $type;
+		}
+
+		function getLocName() {
+			return $this->locName;
+		}
+
+		function getAddress() {
+			return $this->address;
+		}
+
+		function getCity() {
+			return $this->city;
+		}
+
+		function getState() {
+			return $this->state;
+		}
+
+		function getCountry() {
+			return $this->country;
+		}
+
+		function getAccountURL() {
+			return $this->accountURL;
+		}
+
+		function getImageURL() {
+			return $this->imageURL;
+		}
+
+		function getAbout() {
+			return $this->about;
+		}
+
+		function getLat() {
+			return $this->lat;
+		}
+
+		function getLng() {
+			return $this->lng;
+		}
+
+		function getType() {
+			return $this->type;
+		}
+	}
 ?>
