@@ -12,7 +12,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
-	 <link rel="stylesheet" href="assets/the-accounts.css">
+	 <link rel="stylesheet" href="assets/placesonly.css">
 	</head>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />

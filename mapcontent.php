@@ -78,10 +78,18 @@
 			var popUps = document.getElementsByClassName('mapboxgl-popup');
 		  	// Check if there is already a popup on the map and if so, remove it
 		  	if (popUps[0]) popUps[0].remove();
-
+		  	var mappopupHTML = `
+		  		<div class='map-popup-container'>
+		  			<div class='map-popup-image' style="background-image: url('${feature.properties.image}');"></div>
+		  			<div class="map-popup-detail">
+		  				<a href='${feature.properties.url}' class="map-popup-url">${feature.properties.name}</a>
+		  				<p>${feature.properties.address}</p>
+		  			</div>
+		  		</div>
+		  	`;
 		  	var popup = new mapboxgl.Popup({ offset: [0, -5], closeOnCLick: true, closeButton: false })
 		    	.setLngLat(feature.geometry.coordinates)
-		    	.setHTML('<a href=' + feature.properties.url + ' class="popup-url">' + feature.properties.name + '</a>')
+		    	.setHTML(mappopupHTML)
 		    	.setLngLat(feature.geometry.coordinates)
 		    	.addTo(map);
 		}

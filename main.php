@@ -7,12 +7,12 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>The Accounts</title>
+	<title>Places Only</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
-	 <link rel="stylesheet" href="assets/the-accounts.css">
+	 <link rel="stylesheet" href="assets/placesonly.css">
 	</head>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
@@ -21,7 +21,7 @@
 		<header>
 			<nav class="navbar">
 				<a href="/">
-					<img class="navlogo" src="assets/theaccounts.png">
+					<img class="navlogo" src="assets/placesonly.png">
 				</a>
 			</nav>
 		</header>
@@ -38,6 +38,21 @@
 		</footer>
 		<script>
 			var frontpageLocations = [
+			{
+				name: 'San Francisco',
+				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
+				destination: 'bay-area'
+			},
+			{
+				name: 'San Francisco',
+				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
+				destination: 'bay-area'
+			},
+			{
+				name: 'San Francisco',
+				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
+				destination: 'bay-area'
+			},
 			{
 				name: 'San Francisco',
 				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',

@@ -139,9 +139,9 @@
             }
             map.getSource('single-point').setData(geometry);
             var poiCoordinatesLat = document.getElementById("poi-coordinates-lat");
-            poiCoordinatesLat.value = ev.result.geometry.coordinates[0];
+            poiCoordinatesLat.value = coordinates[0];
             var poiCoordinatesLng = document.getElementById("poi-coordinates-lng");
-            poiCoordinatesLng.value = ev.result.geometry.coordinates[1];
+            poiCoordinatesLng.value = coordinates[1];
         });
 
     });
