@@ -1,6 +1,11 @@
 <?php
 	global $conn;
-	$poisSql = "SELECT loc_name, address, city, state, country, lat, lng, image_url, account_url, about, type, reg_date FROM pois";
+	global $dest_param;
+	$cities =  '';
+	if ($dest_param ==  'bay-area')  {
+		$cities  = "where lower(city)='san francisco' or lower(city)='sausalito'";
+	}
+	$poisSql = 'SELECT loc_name, address, city, state, country, lat, lng, image_url, account_name, account_url, about, type, reg_date FROM pois ' . $cities;
 	$result = mysqli_query($conn, $poisSql);
 	$pois = array();
 	if ($result && mysqli_num_rows($result) > 0) {
@@ -15,6 +20,7 @@
         	$poi->setLng($row["lng"]);
         	$poi->setImageURL($row["image_url"]);
         	$poi->setAccountURL($row["account_url"]);
+        	$poi->setAccountName($row["account_name"]);
         	$poi->setAbout($row["about"]);
         	$poi->setType($row["type"]);
         	array_push($pois, $poi);
@@ -47,6 +53,7 @@
 					},
 					"properties": {
       					"name": "' . $poi->getLocName() . '",
+      					"accountName": "' . $poi->getAccountName() . '",
       					"address":  "' . $poi->getAddress() . '",
       					"image": "' . $poi->getImageURL() . '",
       					"url": "' . $poi->getAccountURL() . '",
@@ -112,6 +119,13 @@
 		    // var image = listing.appendChild(document.createElement('img'));
 		    // image.src = prop.image;
 		    // image.className = 'poi-item-image';
+
+		   	var creditContainer = listing.appendChild(document.createElement('div'));
+		    creditContainer.className = 'poi-item-credit-container';
+		   	var creditName = creditContainer.appendChild(document.createElement('a'));
+		    creditName.className = 'poi-item-credit-name';
+		    creditName.href = prop.url;
+		    creditName.innerHTML = "@" + prop.accountName;
 
 		    var detail = listing.appendChild(document.createElement('div'));
 		    detail.className = 'poi-item-detail-container';

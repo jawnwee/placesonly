@@ -147,6 +147,10 @@
 			return $this->country;
 		}
 
+		function getAccountName() {
+			return $this->accountName;
+		}
+
 		function getAccountURL() {
 			return $this->accountURL;
 		}

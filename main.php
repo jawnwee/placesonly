@@ -14,7 +14,7 @@
 	<meta name="author" content="" />
 	 <link rel="stylesheet" href="assets/placesonly.css">
 	</head>
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<body>
@@ -26,9 +26,23 @@
 			</nav>
 		</header>
 		<div class="introduction">
-			<h1 class="frontpage-header">
-				Some caption here...
-			</h1>
+			<div class="front-page-header-container">
+				<h1 class="frontpage-header">
+					Discover Places to
+				</h1>
+				<h1 id="front-content-1" class="frontpage-description">
+					Experience
+				</h1>
+				<h1 id="front-content-2" class="frontpage-description">
+					Instagram
+				</h1>
+				<h1 id="front-content-3" class="frontpage-description">
+					Eat
+				</h1>
+				<h1 id="front-content-4" class="frontpage-description">
+					Drink
+				</h1>
+			</div>
 		</div>
 		<div class="frontpage-container">
 			<div id='frontpage-listings' class='frontpage-listings'></div>
@@ -37,26 +51,48 @@
 			<!-- Footer -->
 		</footer>
 		<script>
+			var divs = $('h1[id^="front-content-"]').hide(),
+			    i = 0;
+
+			(function cycle() { 
+
+			    divs.eq(i).fadeIn(400)
+			              .delay(1000)
+			              .fadeOut(400, cycle);
+
+			    i = ++i % divs.length;
+
+			})();
 			var frontpageLocations = [
 			{
 				name: 'San Francisco',
-				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/sf.jpeg',
 				destination: 'bay-area'
 			},
 			{
-				name: 'San Francisco',
-				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
-				destination: 'bay-area'
+				name: 'New York City',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/nyc.jpg',
+				destination: 'nyc'
 			},
 			{
-				name: 'San Francisco',
-				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
-				destination: 'bay-area'
+				name: 'Los Angeles',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/la.jpg',
+				destination: 'los-angeles'
 			},
 			{
-				name: 'San Francisco',
-				image: 'https://s3-us-west-1.amazonaws.com/the-accounts/sf.jpeg',
-				destination: 'bay-area'
+				name: 'Portland',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/portland.jpg',
+				destination: 'portland'
+			},
+			{
+				name: 'Seattle',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/seattle.jpg',
+				destination: 'seattle'
+			},
+			{
+				name: 'Chicago',
+				image: 'https://placesonly.s3-us-west-1.amazonaws.com/chicago.jpg',
+				destination: 'chicago'
 			}];
 			function buildFrontPage(data) {
 				data.forEach(function(location) {
