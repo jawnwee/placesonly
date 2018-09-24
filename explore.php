@@ -5,14 +5,16 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Places Only</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	 <link rel="stylesheet" href="assets/placesonly.css">
+		<link rel="shortcut icon" href="https://placesonly.s3-us-west-1.amazonaws.com/favicon.ico?v=2" type="image/x-icon">
+		<link rel="icon" href="https://placesonly.s3-us-west-1.amazonaws.com/favicon.ico?v=2" type="image/x-icon">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Places Only</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<link rel="stylesheet" href="assets/placesonly.css">
 	</head>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />

@@ -114,10 +114,10 @@
         map.addLayer({
             "id": "point",
             "source": "single-point",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 10,
-                "circle-color": "#007cbf"
+            "type": "symbol",
+            "layout": {
+                "icon-image": "m-circle-15",
+                'icon-allow-overlap': true,
             }
         });
 

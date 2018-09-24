@@ -36,15 +36,6 @@
 		global $pois;
 		$jsonObjects = array();
 		foreach($pois as $poi) {
-			$type = $poi->getType();
-			$marker = "circle-15";
-			if ($type == 'food') {
-				$marker = "food";
-			} else if ($type == 'activity') {
-				$marker = "playground";
-			} else if ($type == 'nature') {
-				$marker = "natural-feature";
-			}
 			$json = '{
 					"type": "Feature",
 					"geometry": {
@@ -57,7 +48,6 @@
       					"address":  "' . $poi->getAddress() . '",
       					"image": "' . $poi->getImageURL() . '",
       					"url": "' . $poi->getAccountURL() . '",
-      					"marker-symbol": "' . $marker . '"
       				}
 				}';
 			array_push($jsonObjects, $json);

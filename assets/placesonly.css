@@ -107,6 +107,8 @@ a:active {
 	text-align: center;
 	height: 65px;
 	padding-top: 10px;
+	grid-column-start: 2;
+ 	grid-column-end: 3;
 }
 
 .navlogo {
@@ -216,35 +218,60 @@ input#search-bar {
 
 /* Intro */
 .introduction {
-	height: 40vh;
     width: 100%;
-    background: url("https://placesonly.s3-us-west-1.amazonaws.com/introduction.jpg") no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
+    text-align: left;
 }
 
 .front-page-header-container {
-	width: auto;
+	width: 100%;
 	grid-column-start: 2;
  	grid-column-end: 3;
+ 	padding: 10px;
 }
 
 .frontpage-header {
-	color: #fff;
-	text-shadow: 0 0 15px rgba(0,0,0,.4);
+	color: #454547;
+	/*text-shadow: 0 0 15px rgba(0,0,0,.4);*/
 	display: inline-block;
 }
 
-.frontpage-description {
-	color: #fff;
-	text-shadow: 0 0 15px rgba(0,0,0,.4);
+.front-page-description {
+	color: #454547;
+	/*border-bottom: 4px solid #454547;*/
 	display: inline-block;
-	padding-left: 5px;
+}
+
+.front-page-description h1 {
+	text-align: left;
+}
+
+.front-content {
+	color: #454547;
+	margin: 0;
+}
+
+.front-page-anti {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.front-page-anti-header {
+	text-decoration: line-through;
+	display: inline-block;
+}
+
+.front-page-anti-comma {
+	display: inline-block;
+}
+
+.front-page-anti h1 {
+	color: #454547;
 }
 
 .frontpage-container {
@@ -252,7 +279,7 @@ input#search-bar {
     grid-gap: 10px;
     grid-template-rows: 100%;
     grid-template-columns: 1fr 2fr 1fr;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -274,12 +301,12 @@ input#search-bar {
 	display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 240px;
+    grid-template-rows: 300px;
 }
 
 .frontpage-item {
   	width: 100%;
-	height: 240px;
+	height: 300px;
 	position: relative;
 	border-radius: 5px;
 	background-position: center center;
@@ -311,6 +338,9 @@ input#search-bar {
 }
 
 @media screen and (max-width: 1080px) {
+	.introduction {
+	    grid-template-columns: 1fr 4fr 1fr;
+	}
 	.frontpage-container {
 		grid-template-columns: 1fr 4fr 1fr;
 		grid-gap: 0px;
@@ -323,7 +353,11 @@ input#search-bar {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
+	.introduction {
+	    grid-template-columns: 0fr;
+	}
+
 	.frontpage-listings {
 		grid-template-columns: 1fr;
 	}
